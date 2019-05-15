@@ -45,6 +45,8 @@
     "react-dev-utils": "^9.0.0",
     "react-dom": "^16.8.6",
     "react-html-parser": "^2.0.2",
+    "react-redux": "^7.0.1",
+    "redux": "^4.0.1",
     "resolve": "1.10.0",
     "sass-loader": "7.1.0",
     "semver": "6.0.0",
@@ -140,6 +142,7 @@
     "eslint": "^5.16.0",
     "eslint-plugin-react": "^7.12.4",
     "husky": "^2.2.0",
-    "lint-staged": "^8.1.6"
+    "lint-staged": "^8.1.6",
+    "redux-devtools-extension": "^2.13.8"
   }
 }
