@@ -68,7 +68,7 @@ export const listData = {
   ],
 };
 
-const lists = [
+export const lists = [
   {
     id: 'list-1',
     title: 'Things to do <sup>soon!</sup>',
@@ -77,7 +77,7 @@ const lists = [
   },
 ];
 
-const columns = [
+export const columns = [
   {
     id: 'column-1',
     listId: 'list-1',
