@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './Column.scss';
 import PropTypes from 'prop-types';
-// import Card from '../Card/Card.js';
+import Card from '../Card/Card.js';
 // import {settings} from '../../data/dataStore';
 // import Creator from '../Creator/Creator.js';
 import Icon from './Icon.js';
@@ -17,7 +17,8 @@ class Column extends React.Component {
   }
 
   render() {
-    // const {title, icon} = this.props;
+    // const {title, icon, cards} = this.props;
+    const {cards} = this.props;
 
     return (
       <section className={styles.component}>
@@ -27,6 +28,11 @@ class Column extends React.Component {
           </span>
           {this.props.title}
         </h3>
+        <div className={styles.cards}>
+          {cards.map(cardData => (
+            <Card key={cardData.id} {...cardData} />
+          ))}
+        </div>
         {/*<div className={styles.cards}>
           {this.state.cards.map(({key, ...cardProps}) => (
             <Card key={key} {...cardProps} />

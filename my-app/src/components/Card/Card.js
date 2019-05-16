@@ -8,6 +8,7 @@ class Card extends React.Component {
   }
 
   render() {
+    // const {title} = this.props;
     // console.log('this:', this);
     // console.log('this props', this.props);
     return (
