@@ -2,11 +2,15 @@ import React from 'react';
 import styles from './Column.scss';
 import PropTypes from 'prop-types';
 import Card from '../Card/Card.js';
-// import {settings} from '../../data/dataStore';
+import {settings} from '../../data/dataStore';
 // import Creator from '../Creator/Creator.js';
 import Icon from './Icon.js';
 
 class Column extends React.Component {
+
+  static defaultProps = {
+    icon: settings.defaultColumnIcon,
+  }
 
   static propTypes = {
     columnTitle: PropTypes.node,
