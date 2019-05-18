@@ -44,6 +44,7 @@ class Search extends React.Component {
     const {value} = this.state;
     console.log('this.state:', this.state);
     console.log('value:', {value});
+    console.log('this.props:', this.props);
     return (
       <div className={styles.component}>
         <input
