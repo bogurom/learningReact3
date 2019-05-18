@@ -8,6 +8,11 @@ export const settings = {
   },
   defaultListDescription: '<p>I can do all the things!!!</p>',
   defaultColumnIcon: 'list-alt',
+  // dodane przeze mnie:
+  search: {
+    defaultText: 'default text',
+    icon: 'list-alt',
+  },
 };
 
 export const pageContents = {

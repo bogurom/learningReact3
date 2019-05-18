@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './App.scss';
 import PropTypes from 'prop-types';
 import List from '../List/ListContainer.js';
+import Search from '../Search/Search.js';
 // import {pageContents, listData} from '../../data/dataStore';
 // import {pageContents} from '../../data/dataStore';
 
@@ -18,6 +19,7 @@ class App extends React.Component {
       <main className={styles.component}>
         <h1 className={styles.title}>{title}</h1>
         <h2 className={styles.subtitle}>{subtitle}</h2>
+        <Search />
         {/*
         <List {...listData} />
         */}
