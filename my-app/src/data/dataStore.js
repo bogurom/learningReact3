@@ -13,6 +13,17 @@ export const settings = {
     defaultText: 'default text',
     icon: 'list-alt',
   },
+  headerIcon: 'cat',
+  info: {
+    title: 'Info',
+    image: 'https://cdn.pixabay.com/photo/2018/08/15/20/52/jellyfish-3609068_1280.jpg',
+    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+  },
+  faq: {
+    title: 'FAQ',
+    image: 'https://cdn.pixabay.com/photo/2019/01/30/09/41/jellyfish-3964165_1280.jpg',
+    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+  },
 };
 
 export const pageContents = {
