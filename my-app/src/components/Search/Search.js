@@ -3,6 +3,7 @@ import styles from './Search.scss';
 import Button from '../Button/Button';
 import PropTypes from 'prop-types';
 import { settings } from '../../data/dataStore';
+import Container from '../Container/Container';
 // import Icon from '../Icon/Icon';
 
 class Search extends React.Component {
@@ -46,21 +47,23 @@ class Search extends React.Component {
     console.log('value:', {value});
     console.log('this.props:', this.props);
     return (
-      <div className={styles.component}>
-        <input
-          type='text'
-          placeholder={text}
-          value={value}
-          onChange={event => this.handleChange(event)}
-        />
-        <div className={styles.buttons}>
-          {/*<Button onClick={() => this.handleOK()}><Icon name={icon} /></Button>*/}
-          <Button onClick={() => this.handleOK()}></Button>
+      <Container>
+        <div className={styles.component}>
+          <input
+            type='text'
+            placeholder={text}
+            value={value}
+            onChange={event => this.handleChange(event)}
+          />
+          <div className={styles.buttons}>
+            {/*<Button onClick={() => this.handleOK()}><Icon name={icon} /></Button>*/}
+            <Button onClick={() => this.handleOK()}></Button>
+          </div>
+          <div>
+            { countVisible == countAll ? '' : `${countVisible} / ${countAll}` }
+          </div>
         </div>
-        <div>
-          { countVisible == countAll ? '' : `${countVisible} / ${countAll}` }
-        </div>
-      </div>
+      </Container>
     );
   }
 }
