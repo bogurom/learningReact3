@@ -8,12 +8,11 @@ export const settings = {
   },
   defaultListDescription: '<p>I can do all the things!!!</p>',
   defaultColumnIcon: 'list-alt',
-  // dodane przeze mnie:
   search: {
-    defaultText: 'default text',
-    icon: 'list-alt',
+    defaultText: 'search for...',
+    icon: 'search',
   },
-  headerIcon: 'cat',
+  headerIcon: 'space-shuttle',
   info: {
     title: 'Info',
     image: 'https://cdn.pixabay.com/photo/2018/08/15/20/52/jellyfish-3609068_1280.jpg',

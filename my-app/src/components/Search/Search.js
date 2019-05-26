@@ -4,7 +4,8 @@ import Button from '../Button/Button';
 import PropTypes from 'prop-types';
 import { settings } from '../../data/dataStore';
 import Container from '../Container/Container';
-// import Icon from '../Icon/Icon';
+import {withRouter} from 'react-router';
+import Icon from '../Icon/Icon';
 
 class Search extends React.Component {
   static propTypes = {
@@ -14,11 +15,13 @@ class Search extends React.Component {
     changeSearchString: PropTypes.func,
     countVisible: PropTypes.number,
     countAll: PropTypes.number,
+    history: PropTypes.object,
   }
 
   static defaultProps = {
     text: settings.search.defaultText,
     icon: settings.search.icon,
+    // searchString: 'search string in defaultProps in Search.js?',
   }
 
   state = {
@@ -29,10 +32,13 @@ class Search extends React.Component {
     this.setState({
       value: event.target.value,
     });
+    // console.log('this.state:', this.state);
   }
 
   handleOK(){
+    console.log('this.props:', this.props);
     this.props.changeSearchString(this.state.value);
+    this.props.history.push(`/search/${this.state.value}`);
   }
 
   componentWillReceiveProps(newProps){
@@ -41,11 +47,13 @@ class Search extends React.Component {
 
   render() {
     // const {text, icon, countVisible, countAll} = this.props;
-    const {text, countVisible, countAll} = this.props;
+    const {text, countVisible, countAll, icon} = this.props;
     const {value} = this.state;
+    console.log('this:', this);
+    console.log('this.props:', this.props);
     console.log('this.state:', this.state);
     console.log('value:', {value});
-    console.log('this.props:', this.props);
+    // console.log('this.props:', this.props);
     return (
       <Container>
         <div className={styles.component}>
@@ -56,8 +64,7 @@ class Search extends React.Component {
             onChange={event => this.handleChange(event)}
           />
           <div className={styles.buttons}>
-            {/*<Button onClick={() => this.handleOK()}><Icon name={icon} /></Button>*/}
-            <Button onClick={() => this.handleOK()}></Button>
+            <Button onClick={() => this.handleOK()}><Icon name={icon} /></Button>
           </div>
           <div>
             { countVisible == countAll ? '' : `${countVisible} / ${countAll}` }
@@ -68,4 +75,4 @@ class Search extends React.Component {
   }
 }
 
-export default Search;
+export default withRouter(Search);

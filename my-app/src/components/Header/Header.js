@@ -4,6 +4,7 @@ import styles from './Header.scss';
 import Container from '../Container/Container';
 import Icon from '../Icon/Icon';
 import {settings} from '../../data/dataStore.js';
+import Search from '../Search/Search';
 // import PropTypes from 'prop-types';
 
 
@@ -11,6 +12,7 @@ class Header extends React.Component {
   render() {
     return (
       <header className={styles.component}>
+        <Search />
         <Container>
           <div className={styles.wrapper}>
             <Link to='/' className={styles.logo}>
