@@ -1,7 +1,7 @@
 // selectors
-export const getSearchString = ({state}) => state.searchString;
+export const getSearchString = (state) => state.searchString && console.log('searchString:', state.searchString);
 export const countAllCards = ({cards}) => cards.length;
-export const countVisibleCards = ({cards}, searchString) => cards.filter(card => new RegExp(searchString, 'i').test(card.title)).length;
+export const countVisibleCards = ({cards, searchString}) => cards.filter(card => new RegExp(searchString, 'i').test(card.title)).length;
 
 // action name creator
 const reducerName = 'searchString';
@@ -13,8 +13,8 @@ const createActionName = name => `app/${reducerName}/${name}`;
 export const CHANGE = createActionName('CHANGE');
 
 // action creators
-export const createAction_searchString = payload => ({ payload, type: CHANGE });
-// export const createAction_changeSearchString = payload => ({ payload, type: CHANGE });
+// export const createAction_searchString = payload => ({ payload, type: CHANGE });
+export const createAction_changeSearchString = payload => ({ payload, type: CHANGE });
 
 
 // reducer
@@ -26,3 +26,13 @@ export default function reducer(statePart = '', action = {}) {
       return statePart;
   }
 }
+
+// // reducer
+// export default function reducer(state = [], action = {}) {
+//   switch (action.type) {
+//     case ADD_CARD:
+//       return [...state, { ...action.payload, id: shortid.generate() }];
+//     default:
+//       return state;
+//   }
+// }

@@ -4,7 +4,7 @@ import styles from './Header.scss';
 import Container from '../Container/Container';
 import Icon from '../Icon/Icon';
 import {settings} from '../../data/dataStore.js';
-import Search from '../Search/Search';
+import Search from '../Search/SearchContainer';
 // import PropTypes from 'prop-types';
 
 

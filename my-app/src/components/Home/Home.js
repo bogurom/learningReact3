@@ -3,7 +3,7 @@ import styles from './Home.scss';
 import PropTypes from 'prop-types';
 import ListLink from '../ListLink/ListLink.js';
 // import Search from '../Search/Search.js';
-// import {pageContents, listData} from '../../data/dataStore';
+// import {listData} from '../../data/dataStore';
 // import {pageContents} from '../../data/dataStore';
 
 class Home extends React.Component {
